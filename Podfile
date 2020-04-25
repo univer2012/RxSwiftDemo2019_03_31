@@ -79,7 +79,7 @@ target 'RxSwiftDemo2019_03_31' do
   pod 'MBProgressHUD'
 
   # R.swift 自动生成资源文件方法
-  pod 'R.swift'
+#  pod 'R.swift'
 
   # swift版本的加密库
   #pod 'CryptoSwift'

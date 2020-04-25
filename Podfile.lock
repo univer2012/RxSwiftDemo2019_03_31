@@ -1,8 +1,41 @@
 PODS:
   - Alamofire (4.8.2)
+  - Alamofire-Synchronous (4.0.0):
+    - Alamofire (~> 4.0)
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
+  - CocoaAsyncSocket (7.6.4)
+  - CYLTabBarController (1.28.5):
+    - CYLTabBarController/Core (= 1.28.5)
+  - CYLTabBarController/Core (1.28.5)
   - Differentiator (3.1.0)
+  - DTCoreText (1.6.23):
+    - DTCoreText/Core (= 1.6.23)
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTCoreText/Core (1.6.23):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.14)
+  - DTFoundation/DTAnimatedGIF (1.7.14)
+  - DTFoundation/DTHTMLParser (1.7.14):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.14):
+    - DTFoundation/Core
+  - DZNEmptyDataSet (1.8.1)
+  - IQKeyboardManagerSwift (6.2.1)
   - Kingfisher (4.10.1)
+  - lottie-ios (3.1.8)
+  - MBProgressHUD (1.2.0)
   - MJRefresh (3.2.0)
+  - MMKV (1.1.1):
+    - MMKVCore (~> 1.1.1)
+  - MMKVCore (1.1.1)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
@@ -14,6 +47,9 @@ PODS:
   - "NSObject+Rx (4.4.1)":
     - RxSwift (~> 4.3)
   - ObjectMapper (3.5.1)
+  - PluggableApplicationDelegate (0.2.0)
+  - PPSPing (0.3.0)
+  - Protobuf (3.11.4)
   - Result (4.1.0)
   - Reusable (4.0.5):
     - Reusable/Storyboard (= 4.0.5)
@@ -32,67 +68,198 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
+  - SAMKeychain (1.5.3)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.7.3):
+    - SDWebImage/Core (= 5.7.3)
+  - SDWebImage/Core (5.7.3)
   - SnapKit (4.2.0)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - SSZipArchive (2.2.2)
   - SVProgressHUD (2.2.5)
-  - SwiftyJSON (4.3.0)
+  - SwifterSwift (5.1.0):
+    - SwifterSwift/AppKit (= 5.1.0)
+    - SwifterSwift/CoreGraphics (= 5.1.0)
+    - SwifterSwift/CoreLocation (= 5.1.0)
+    - SwifterSwift/Dispatch (= 5.1.0)
+    - SwifterSwift/Foundation (= 5.1.0)
+    - SwifterSwift/MapKit (= 5.1.0)
+    - SwifterSwift/SceneKit (= 5.1.0)
+    - SwifterSwift/SpriteKit (= 5.1.0)
+    - SwifterSwift/SwiftStdlib (= 5.1.0)
+    - SwifterSwift/UIKit (= 5.1.0)
+  - SwifterSwift/AppKit (5.1.0)
+  - SwifterSwift/CoreGraphics (5.1.0)
+  - SwifterSwift/CoreLocation (5.1.0)
+  - SwifterSwift/Dispatch (5.1.0)
+  - SwifterSwift/Foundation (5.1.0)
+  - SwifterSwift/MapKit (5.1.0)
+  - SwifterSwift/SceneKit (5.1.0)
+  - SwifterSwift/SpriteKit (5.1.0)
+  - SwifterSwift/SwiftStdlib (5.1.0)
+  - SwifterSwift/UIKit (5.1.0)
+  - SwiftProtobuf (1.4.0)
+  - SwiftyJSON (4.2.0)
   - Then (2.5.0)
+  - TYAlertController (1.2.0)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
+  - URLNavigator (2.3.0)
+  - WCDB (1.0.7.5):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
+  - YYModel (1.0.4)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
+  - Alamofire-Synchronous (~> 4.0)
+  - Charts
+  - CocoaAsyncSocket
+  - CYLTabBarController (~> 1.28.0)
+  - DTCoreText (~> 1.6.21)
+  - DZNEmptyDataSet
+  - IQKeyboardManagerSwift (~> 6.2.0)
   - Kingfisher
+  - lottie-ios
+  - MBProgressHUD
   - MJRefresh
+  - MMKV
   - Moya (~> 13.0)
   - Moya/RxSwift
   - "NSObject+Rx"
   - ObjectMapper
+  - PluggableApplicationDelegate (from `https://github.com/fmo91/PluggableApplicationDelegate.git`)
+  - PPSPing (~> 0.3.0)
+  - Protobuf
   - Reusable (~> 4.0.0)
   - RxAlamofire
   - RxCocoa (~> 4.0)
   - RxDataSources
   - RxSwift (~> 4.0)
+  - SAMKeychain
+  - SDCycleScrollView (~> 1.80)
+  - SDWebImage (~> 5.0)
   - SnapKit
+  - SSZipArchive
   - SVProgressHUD
-  - SwiftyJSON (~> 4.0)
+  - SwifterSwift
+  - SwiftProtobuf (~> 1.4.0)
+  - SwiftyJSON (~> 4.2.0)
   - Then
+  - TYAlertController
+  - "UITableView+FDTemplateLayoutCell (~> 1.6)"
+  - URLNavigator
+  - WCDB
+  - YYModel
+  - YYText
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Alamofire-Synchronous
+    - Charts
+    - CocoaAsyncSocket
+    - CYLTabBarController
     - Differentiator
+    - DTCoreText
+    - DTFoundation
+    - DZNEmptyDataSet
+    - IQKeyboardManagerSwift
     - Kingfisher
+    - lottie-ios
+    - MBProgressHUD
     - MJRefresh
+    - MMKV
+    - MMKVCore
     - Moya
     - "NSObject+Rx"
     - ObjectMapper
+    - PPSPing
+    - Protobuf
     - Result
     - Reusable
     - RxAlamofire
     - RxCocoa
     - RxDataSources
     - RxSwift
+    - SAMKeychain
+    - SDCycleScrollView
+    - SDWebImage
     - SnapKit
+    - SQLiteRepairKit
+    - SSZipArchive
     - SVProgressHUD
+    - SwifterSwift
+    - SwiftProtobuf
     - SwiftyJSON
     - Then
+    - TYAlertController
+    - "UITableView+FDTemplateLayoutCell"
+    - URLNavigator
+    - WCDB
+    - WCDBOptimizedSQLCipher
+    - YYModel
+    - YYText
+
+EXTERNAL SOURCES:
+  PluggableApplicationDelegate:
+    :git: https://github.com/fmo91/PluggableApplicationDelegate.git
+
+CHECKOUT OPTIONS:
+  PluggableApplicationDelegate:
+    :commit: 465ebe3f6441f48f2a2144b59c0459c8f6cb7564
+    :git: https://github.com/fmo91/PluggableApplicationDelegate.git
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  CYLTabBarController: edd9fecba9afa3f2e9e44ed50ca6dde69941f25f
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  DTCoreText: 67023bb51b26711d5f640c851f4845aea14c24c9
+  DTFoundation: 25aa19bb7c6e225b1dfae195604fb8cf1da0ab4c
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  IQKeyboardManagerSwift: 0f0ae8935360b4003e6ea1ac7c19898f01e2f7c7
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  MMKV: 5eb44526fcf38152328ebfeff5ec585972ace00d
+  MMKVCore: 2748bf702287a814a6c514d054033e41e07f5c0f
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PluggableApplicationDelegate: 5144bff5ef6ea834a362341a65199b38912d7dd6
+  PPSPing: f275a44303d6e1ebbd07b90fe8d29831838e58a7
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   RxAlamofire: ed65f451f5a9a59419b0b9e705043dc01410edd9
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
+  SwiftProtobuf: b06646ed6cdcfc3fecd074c6000fe0c413140e4f
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
+  TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
+  WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: b43b86c6d05ef6838be566cde4c05542878d42ad
+PODFILE CHECKSUM: 3aaf8cc4f232f41fc90e7d6635c9bb382e4ead7a
 
 COCOAPODS: 1.9.1
