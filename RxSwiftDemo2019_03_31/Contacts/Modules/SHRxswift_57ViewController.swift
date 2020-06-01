@@ -34,8 +34,8 @@ class SHRxswift_57ViewController: UIViewController {
         //初始化 Rxswift57ViewModel
         let viewModel = Rxswift57ViewModel(
             input: (
-                headerRefresh: self.tableView.mj_header.rx.refreshing.asObservable(),
-                footerRefresh: self.tableView.mj_footer.rx.refreshing.asObservable()
+                headerRefresh: self.tableView.mj_header!.rx.refreshing.asObservable(),
+                footerRefresh: self.tableView.mj_footer!.rx.refreshing.asObservable()
             ),
             dependency: (disposeBag: self.disposeBag,
                          networkService: Network57Service()))
@@ -49,12 +49,12 @@ class SHRxswift_57ViewController: UIViewController {
         
         //下拉刷新状态结束的绑定
         viewModel.endHeaderRefreshing
-            .bind(to: self.tableView.mj_header.rx.endRefreshing)
+            .bind(to: self.tableView.mj_header!.rx.endRefreshing)
             .disposed(by: disposeBag)
         
         //上拉刷新状态结束的绑定
         viewModel.endFooterRefreshing
-            .bind(to: self.tableView.mj_footer.rx.endRefreshing)
+            .bind(to: self.tableView.mj_footer!.rx.endRefreshing)
             .disposed(by: disposeBag)
     }
     
