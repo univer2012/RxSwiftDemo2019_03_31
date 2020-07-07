@@ -74,6 +74,8 @@
 		04BF70D5244CAA24002F5848 /* SHRxswift_21NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70D4244CAA24002F5848 /* SHRxswift_21NewViewController.swift */; };
 		04BF70D9244CAE23002F5848 /* SHRxswift_22ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70D8244CAE23002F5848 /* SHRxswift_22ViewController.swift */; };
 		04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB437422DED36F0042A456 /* SHRxswift_18ViewController.swift */; };
+		320E6E8D2499B5F9007C4F34 /* SHKVOPrivatePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E6E8C2499B5F9007C4F34 /* SHKVOPrivatePerson.swift */; };
+		3289BCD62491F7C200D3D6D6 /* SHSwiftUsingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289BCD52491F7C200D3D6D6 /* SHSwiftUsingViewController.swift */; };
 		3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */; };
 		3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */; };
 		3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */; };
@@ -205,6 +207,8 @@
 		04CB437422DED36F0042A456 /* SHRxswift_18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_18ViewController.swift; sourceTree = "<group>"; };
 		04CB437622DF36750042A456 /* testPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo2019_03_31.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		320E6E8C2499B5F9007C4F34 /* SHKVOPrivatePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKVOPrivatePerson.swift; sourceTree = "<group>"; };
+		3289BCD52491F7C200D3D6D6 /* SHSwiftUsingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSwiftUsingViewController.swift; sourceTree = "<group>"; };
 		3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_8ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_12ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_13ViewController.swift; sourceTree = "<group>"; };
@@ -611,6 +615,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		3289BCD42491F78200D3D6D6 /* 4SwiftUsing */ = {
+			isa = PBXGroup;
+			children = (
+				3289BCD52491F7C200D3D6D6 /* SHSwiftUsingViewController.swift */,
+				320E6E8C2499B5F9007C4F34 /* SHKVOPrivatePerson.swift */,
+			);
+			path = 4SwiftUsing;
+			sourceTree = "<group>";
+		};
 		3F8CFF7D22D368D10067194E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +674,7 @@
 		3FB91A5F22B787E3006F7104 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3289BCD42491F78200D3D6D6 /* 4SwiftUsing */,
 				04B6569F241E1E2B007AB032 /* 3CALayer */,
 				045846CE238FCDFA00622D96 /* 2解析JSON数据 */,
 				8F78F3FC238D81690086A6AA /* 1CoreMotion_Demo */,
@@ -981,6 +995,7 @@
 				0430CA3822E5CD48003390A5 /* SHRxswift_20ViewController.swift in Sources */,
 				04BF70D0244CA119002F5848 /* UIViewController+Rx.swift in Sources */,
 				047C403D244E774000A9F7F8 /* SHRxswift_22D3ViewController.swift in Sources */,
+				320E6E8D2499B5F9007C4F34 /* SHKVOPrivatePerson.swift in Sources */,
 				0430DD2C22E6E832003390A5 /* ObservableType+ObjectMapper.swift in Sources */,
 				048019682449DB780024FF51 /* SHRxswift_5NewViewController.swift in Sources */,
 				8F20A43223772BC20040BE9A /* Rxswift57ViewModel.swift in Sources */,
@@ -1025,6 +1040,7 @@
 				3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */,
 				8FF81D7A237CE541007BB516 /* UIImagePickerController+Rx.swift in Sources */,
 				8FD82140238A6786005A8A74 /* SHRxswift_63MyObserver.swift in Sources */,
+				3289BCD62491F7C200D3D6D6 /* SHSwiftUsingViewController.swift in Sources */,
 				3FB94F2822C1BD5E009EB6D7 /* SHRxswift_22D5ViewController.swift in Sources */,
 				04B656AE241E26D2007AB032 /* SHLayerListDemoViewController.swift in Sources */,
 				8F0D422F22D0839D004C1E53 /* SHRxswift_11ViewController.swift in Sources */,
