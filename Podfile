@@ -130,6 +130,10 @@ target 'RxSwiftDemo2019_03_31' do
               config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['-D', 'TRACE_RESOURCES']
             end
           end
+        elsif target.name == 'PluggableApplicationDelegate'
+          target.build_configurations.each do |config|
+              config.build_settings['SWIFT_VERSION'] = 4.0
+          end
         end
       end
     end
