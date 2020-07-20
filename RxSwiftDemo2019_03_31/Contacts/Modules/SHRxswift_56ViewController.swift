@@ -29,7 +29,7 @@ class SHRxswift_56ViewController: UIViewController {
         self.tableView.mj_header = MJRefreshNormalHeader()
         
         //初始化Rxswift56ViewModel
-        let viewModel = Rxswift56ViewModel(headerRefresh: self.tableView.mj_header.rx.refreshing.asDriver())
+        let viewModel = Rxswift56ViewModel(headerRefresh: self.tableView.mj_header!.rx.refreshing.asDriver())
         
         //单元格数据的绑定
         viewModel.tableData.asDriver()
@@ -42,7 +42,7 @@ class SHRxswift_56ViewController: UIViewController {
         
         //下拉刷新状态结束的绑定
         viewModel.endHeaderRefreshing
-            .drive(self.tableView.mj_header.rx.endRefreshing)
+            .drive(self.tableView.mj_header!.rx.endRefreshing)
             .disposed(by: disposeBag)
     }
     

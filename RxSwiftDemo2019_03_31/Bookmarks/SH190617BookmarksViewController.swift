@@ -13,7 +13,7 @@ import SnapKit
 
 
 
-class SH190617BookmarksViewController: UIViewController,UIGestureRecognizerDelegate {
+class SH190617BookmarksViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var tableView : UITableView?
     
@@ -46,17 +46,19 @@ class SH190617BookmarksViewController: UIViewController,UIGestureRecognizerDeleg
             "1、加速传感器（CoreMotion）的用法（要用真机）",
             "2、解析JSON数据",
             "3、CALayer Demos",
+            "4、Swift的基础使用",
         ]
         let tempClassNameArray = [
-        "SHCoreMotionDemoViewController",
-        "SHJSONSerializationViewController",
-        "SHLayerListDemoViewController",
+            "SHCoreMotionDemoViewController",
+            "SHJSONSerializationViewController",
+            "SHLayerListDemoViewController",
+            "SHSwiftUsingViewController",
         ]
         
         self.inStoryboardVCArray = []
         
         self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "Bookmarks")
-
+        
     }
     
     private func p_addSectionData(with classNameArray:[String], titleArray:[String],title:String) {

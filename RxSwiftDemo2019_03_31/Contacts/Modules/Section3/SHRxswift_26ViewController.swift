@@ -21,12 +21,12 @@ class SHRxswift_26ViewController: SHBaseTableViewController {
 
         self.actionType = .method
         //section 1
-        var tempTitleArray = [
+        let tempTitleArray = [
             "1.当我们拖动滑块时，在控制台中实时输出 slider 当前值。",
             "2.UIStepper（步进器）- 当 stepper 值改变时，在控制台中实时输出当前值。",
             "2_2.我们使用滑块（slider）来控制 stepper 的步长。",
         ]
-        var tempClassNameArray = [
+        let tempClassNameArray = [
             "demo1",
             "demo2",
             "demo2_2",
