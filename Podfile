@@ -122,8 +122,6 @@ target 'RxSwiftDemo2019_03_31' do
 #    pod 'SwiftyJSON', '~> 4.0'
     
     ##  RxSwift的调试相关
-    # 此处的作用
-    # 作用一：针对PluggableApplicationDelegate设置Swift版本
     post_install do |installer|
       installer.pods_project.targets.each do |target|
         if target.name == 'RxSwift'
@@ -133,9 +131,9 @@ target 'RxSwiftDemo2019_03_31' do
             end
           end
         elsif target.name == 'PluggableApplicationDelegate'
-            target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = 4.0
-            end
+          target.build_configurations.each do |config|
+              config.build_settings['SWIFT_VERSION'] = 4.0
+          end
         end
       end
     end
