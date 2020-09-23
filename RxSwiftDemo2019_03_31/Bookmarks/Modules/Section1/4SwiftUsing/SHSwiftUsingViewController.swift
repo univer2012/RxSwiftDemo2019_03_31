@@ -8,6 +8,7 @@
 
 import UIKit
 import LocalAuthentication
+import RxSwift
 
 extension URLComponents {
     
@@ -20,6 +21,10 @@ class SHSwiftUsingViewController: SHBaseTableViewController {
 
     //上一次的touchId data
     private var lastTouchIdData:Data?
+    
+    lazy var kvoPerson = SHKVOPrivatePerson()
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +61,7 @@ class SHSwiftUsingViewController: SHBaseTableViewController {
             "5.URLComponents的使用",
             "6.测试，用KVO去修改私有属性，该属性只有get方法，会不会引起崩溃 -- 答案：会引起崩溃",
             "7.测试，用KVO去修改dynamic属性，该属性是枚举Int类型，会不会引起崩溃 -- 答案：不会崩溃",
+            "8.用KVO监听某个属性，当这个属性对象的属性发生变化时，是否会触发这个KVO监听？-- 会崩溃",
         ]
         let tempClassNameArray = [
             "sec1Demo1",
@@ -65,6 +71,7 @@ class SHSwiftUsingViewController: SHBaseTableViewController {
             "sec1Demo5",
             "sec1Demo6",
             "sec1Demo7",
+            "sec1Demo8",
         ]
         self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "Swift的基本使用")
     }
@@ -78,6 +85,17 @@ class SHSwiftUsingViewController: SHBaseTableViewController {
         }
         //print("errorMsg:" + self.errorMessageForFails(errorCode:(error?.code)! ))
         return nil
+    }
+    
+    //MARK: 8.用KVO监听某个属性，当这个属性对象的属性发生变化时，是否会触发这个KVO监听？-- 会崩溃
+    @objc func sec1Demo8() {
+        self.kvoPerson.rx.observe(UIView.self, "customView").subscribe(onNext: { (view) in
+            print("customView=\(String(describing: view))")
+        }).disposed(by: self.disposeBag)
+//        self.kvoPerson.rx.observeWeakly(UIView.self, "view").subscribe(onNext: { (view) in
+//            print("view=\(String(describing: view))")
+//        }).disposed(by: self.disposeBag)
+        self.kvoPerson.customView.frame = CGRect(x: 20, y: 30, width: 200, height: 200)
     }
     
     //MARK: 7.测试，用KVO去修改dynamic属性，该属性是枚举Int类型，会不会引起崩溃 -- 答案：不会崩溃

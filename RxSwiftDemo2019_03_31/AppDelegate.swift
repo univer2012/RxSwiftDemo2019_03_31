@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
         self.window?.rootViewController = SHTabBarViewController()
+        //self.window?.rootViewController = UINavigationController(rootViewController: SHNativeJSActionViewController())
         self.window?.makeKeyAndVisible()
         
         return true

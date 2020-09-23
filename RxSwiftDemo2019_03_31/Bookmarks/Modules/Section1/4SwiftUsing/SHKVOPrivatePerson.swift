@@ -18,6 +18,8 @@ import UIKit
 }
 
 class SHKVOPrivatePerson: NSObject {
+    
+    var customView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 
     @objc dynamic var stockSelectedType: StockCenterViewControllerType = .FOLLOWED {
         didSet {

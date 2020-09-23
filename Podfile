@@ -67,7 +67,7 @@ target 'RxSwiftDemo2019_03_31' do
 #  pod 'Masonry'
 
   # QMUI模块
-  #pod 'QMUIKit'
+  pod 'QMUIKit'
 
   # Lottie动画
   pod 'lottie-ios'
@@ -82,7 +82,7 @@ target 'RxSwiftDemo2019_03_31' do
 #  pod 'R.swift'
 
   # swift版本的加密库
-  #pod 'CryptoSwift'
+  pod 'CryptoSwift'
 
   pod 'YYModel'
 

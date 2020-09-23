@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+            <script language="javascript">
+            var ctuapp_share_img="www.baidu.com";
+            function scanClick() {
+                window.webkit.messageHandlers.ScanAction.postMessage(null);
+            }
+                
+            function shareClick() {
+            	//【command 命令 系列】
+                window.webkit.messageHandlers.JSActionBridge.postMessage({
+                    method: "handlerAction",
+                    data: {
+                        actionEvent: "command_share",
+                        paramsJsonValue: {
+                            title:'测试分享的标题',
+                            content:'测试分享的内容',
+                            url:'http://m.rblcmall.com/share/openShare.htm?share_uuid=shdfxdfdsfsdfs&share_url=http://m.rblcmall.com/store_index_32787.htm&imagePath=http://c.hiphotos.baidu.com/image/pic/item/f3d3572c11dfa9ec78e256df60d0f703908fc12e.jpg'
+                        },
+                        successCallback: "shareResult",
+                        errorCallback: "shareResult"
+                    }
+                });
+            }
+            
+            function shareResult(jsonParam) {
+                var code = jsonParam['code'];
+                if (code == 0) {
+                    asyncAlert('分享成功');
+                    document.getElementById("returnValue").value = content;
+                } else if (code == -1) {
+                    asyncAlert('分享失败');
+                    document.getElementById("returnValue").value = content;
+                }
+            }
+            
+            function locationClick() {
+            	//【get 获取信息 系列】
+                window.webkit.messageHandlers.JSActionBridge.postMessage({
+                    method: "handlerAction",
+                    data: {
+                        actionEvent: "get_location_info",
+                        paramsJsonValue: {
+                            name: "univer012",
+                        },
+                        successCallback: "setLocation",
+                        errorCallback: "setLocation"
+                    }
+                });
+            }
+            
+            function setLocation(location) {
+                var data = location['data'];
+                asyncAlert(data['name'] + ':' + data['location']);
+                document.getElementById("returnValue").value = location;
+            }
+            
+            function pushToStockQuote() {
+            	//【跳转到原生页面 系列】 -- 跳转到600837个股
+                window.webkit.messageHandlers.JSActionBridge.postMessage({
+                    method: "handlerAction",
+                    data: {
+                        actionEvent: "goto_native_module",
+                        paramsJsonValue: {
+                            url: "yxzq_goto://stock_quote?market=sh&code=600837",
+                        },
+                        successCallback: "pushToStockQuoteResult",
+                        errorCallback: "pushToStockQuoteResult"
+                    }
+                });
+            }
+            
+            function pushToStockQuoteResult(jsonParam) {
+                var code = jsonParam['code'];
+                if (code == 0) {
+                    asyncAlert('跳转成功' + jsonParam['desc']);
+                    document.getElementById("returnValue").value = content;
+                } else if (code == -1) {
+                    asyncAlert('跳转失败' + jsonParam['desc']);
+                    document.getElementById("returnValue").value = content;
+                }
+            }
+            
+            function getQRCode(result) {
+                asyncAlert(result);
+                document.getElementById("returnValue").value = result;
+            }
+            
+            function colorClick() {
+                window.webkit.messageHandlers.Color.postMessage([67,205,128,0.5]);
+            }
+            
+            function payClick() {
+                window.webkit.messageHandlers.Pay.postMessage({order_no:'201511120981234',channel:'wx',amount:1,subject:'粉色外套'});
+            }
+            
+            function payResult(str) {
+                asyncAlert(str);
+                document.getElementById("returnValue").value = str;
+            }
+            
+            
+
+            function shake() {
+                window.webkit.messageHandlers.Shake.postMessage(null);
+            }
+            
+            
+            
+            function playSound() {
+                window.webkit.messageHandlers.PlaySound.postMessage('shake_sound_male.wav');
+            }
+            
+            function asyncAlert(content) {
+                setTimeout(function(){
+                           alert(content);
+                           },1);
+            }
+            
+            
+            </script>
+            </head>
+    
+    <body>
+        <h1>这是按钮调用</h1>
+        <input type="button" value="扫一扫" onclick="scanClick()" />
+        <input type="button" value="获取定位" onclick="locationClick()" />
+        <input type="button" value="修改背景色" onclick="colorClick()" />
+        <input type="button" value="分享" onclick="shareClick()" />
+        <input type="button" value="支付" onclick="payClick()" />
+        <input type="button" value="摇一摇" onclick="shake()" />
+        <input type="button" value="跳转到600837个股" onclick="pushToStockQuote()" />
+        <input type="button" value="播放声音" onclick="playSound()" />
+        
+        <h1>这是文件上传</h1>
+
+        <input type="file" />
+        
+        <h1>这是回调结果展示区</h1>
+        <textarea id ="returnValue" type="value" rows="5" cols="40">
+        
+        </textarea>
+        
+        <h4>竖直方向的表头：</h4>
+        <table border="1" style="width:90%;height:600px">
+            <tr>
+                <th>姓名</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th>电话</th>
+                <td>555 77 854</td>
+            </tr>
+            <tr>
+                <th>传真</th>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>
