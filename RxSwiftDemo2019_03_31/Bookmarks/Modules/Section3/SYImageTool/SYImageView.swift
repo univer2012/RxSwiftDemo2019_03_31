@@ -51,4 +51,9 @@ extension UIImageView {
         
     }
     
+    //非缓存的方式（自己完成）
+    func loadImageWithURLNoCache(url:String) {
+        
+    }
+    
 }

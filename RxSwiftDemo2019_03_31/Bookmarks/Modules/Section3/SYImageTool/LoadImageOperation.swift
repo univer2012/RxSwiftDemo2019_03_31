@@ -36,6 +36,7 @@ class LoadImageOperation: Operation {
             return
         }
         
+        // 上锁
         // 1.2 判断是否已经开启了同一个网络任务
         if var array = self.__reTaskInfo[self.urlStr ?? ""] {
             array.append(self.imageview!)
@@ -161,4 +162,5 @@ class LoadImageOperation: Operation {
         }
     }
     
+    //解锁代码自己写（防止脏数据的出现）
 }

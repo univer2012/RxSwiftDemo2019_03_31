@@ -43,6 +43,16 @@ class SH190617BookmarksViewController: SHBaseTableViewController {
                 
         self.p_addSectionData(with: tempClassNameArray2, titleArray: tempTitleArray2, title: "原生与H5的交互")
         
+        //MARK: section 3
+        let tempTitleArray3 = [
+            "03.图片加载框架实现（SDWebImage轻量版，swift工具）二",
+        ]
+        let tempClassNameArray3 = [
+            "SHImageLoadToolViewController",
+        ]
+                
+        self.p_addSectionData(with: tempClassNameArray3, titleArray: tempTitleArray3, title: "iOS架构进阶")
+        
         
         
     }
