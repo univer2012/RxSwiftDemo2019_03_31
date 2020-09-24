@@ -100,6 +100,8 @@
 		32971D9F250B15B0009D2733 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 32971D9E250B15B0009D2733 /* index.html */; };
 		32FD19EB251B3C2800413500 /* LoadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD19EA251B3C2800413500 /* LoadImageOperation.swift */; };
 		32FD19EF251B3C6400413500 /* SYImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD19EE251B3C6400413500 /* SYImageView.swift */; };
+		32FD1D03251C4A3D00413500 /* SHImageLoadToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1D02251C4A3D00413500 /* SHImageLoadToolViewController.swift */; };
+		32FD1D09251C4B9300413500 /* SYImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD1D08251C4B9300413500 /* SYImageCache.swift */; };
 		3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */; };
 		3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */; };
 		3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */; };
@@ -257,6 +259,8 @@
 		32971D9E250B15B0009D2733 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		32FD19EA251B3C2800413500 /* LoadImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageOperation.swift; sourceTree = "<group>"; };
 		32FD19EE251B3C6400413500 /* SYImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYImageView.swift; sourceTree = "<group>"; };
+		32FD1D02251C4A3D00413500 /* SHImageLoadToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHImageLoadToolViewController.swift; sourceTree = "<group>"; };
+		32FD1D08251C4B9300413500 /* SYImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYImageCache.swift; sourceTree = "<group>"; };
 		3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_8ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_12ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_13ViewController.swift; sourceTree = "<group>"; };
@@ -787,10 +791,20 @@
 		32FD19E9251B3B8800413500 /* Section3 */ = {
 			isa = PBXGroup;
 			children = (
-				32FD19EE251B3C6400413500 /* SYImageView.swift */,
-				32FD19EA251B3C2800413500 /* LoadImageOperation.swift */,
+				32FD1D02251C4A3D00413500 /* SHImageLoadToolViewController.swift */,
+				32FD1D06251C4A4300413500 /* SYImageTool */,
 			);
 			path = Section3;
+			sourceTree = "<group>";
+		};
+		32FD1D06251C4A4300413500 /* SYImageTool */ = {
+			isa = PBXGroup;
+			children = (
+				32FD19EE251B3C6400413500 /* SYImageView.swift */,
+				32FD19EA251B3C2800413500 /* LoadImageOperation.swift */,
+				32FD1D08251C4B9300413500 /* SYImageCache.swift */,
+			);
+			path = SYImageTool;
 			sourceTree = "<group>";
 		};
 		3F8CFF7D22D368D10067194E /* Modules */ = {
@@ -1122,6 +1136,7 @@
 				8FD82139238A5DE3005A8A74 /* SHRxswift_62MyTableViewCell.swift in Sources */,
 				04801972244A850B0024FF51 /* SHRxswift_9NewViewController.swift in Sources */,
 				3FB94F2E22C36E84009EB6D7 /* UIImageCategory.swift in Sources */,
+				32FD1D03251C4A3D00413500 /* SHImageLoadToolViewController.swift in Sources */,
 				049284C8244FCB4200022DB0 /* SHRxswift_24ViewController.swift in Sources */,
 				044A77852375397700611F0C /* MJRefreshComponent+Rx.swift in Sources */,
 				3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */,
@@ -1207,6 +1222,7 @@
 				32971D91250A0382009D2733 /* YXRefreshHeader.swift in Sources */,
 				04801982244C34C00024FF51 /* SHRxswift_17NewViewController.swift in Sources */,
 				8FF81D78237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift in Sources */,
+				32FD1D09251C4B9300413500 /* SYImageCache.swift in Sources */,
 				32971D93250A05D0009D2733 /* SHNativeJSActionViewController.swift in Sources */,
 				8FF81D76237CE291007BB516 /* SHRxswift_59ViewController.swift in Sources */,
 				3F8CFF8522D473B10067194E /* SHRxswift_16ViewController.swift in Sources */,
