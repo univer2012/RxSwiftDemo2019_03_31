@@ -98,6 +98,8 @@
 		32971D97250A09C1009D2733 /* YXConstant+Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32971D96250A09C1009D2733 /* YXConstant+Device.swift */; };
 		32971D9A250A0ACD009D2733 /* YXKeyChainUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32971D99250A0ACD009D2733 /* YXKeyChainUtil.swift */; };
 		32971D9F250B15B0009D2733 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 32971D9E250B15B0009D2733 /* index.html */; };
+		32FD19EB251B3C2800413500 /* LoadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD19EA251B3C2800413500 /* LoadImageOperation.swift */; };
+		32FD19EF251B3C6400413500 /* SYImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD19EE251B3C6400413500 /* SYImageView.swift */; };
 		3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */; };
 		3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */; };
 		3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */; };
@@ -253,6 +255,8 @@
 		32971D96250A09C1009D2733 /* YXConstant+Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YXConstant+Device.swift"; sourceTree = "<group>"; };
 		32971D99250A0ACD009D2733 /* YXKeyChainUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXKeyChainUtil.swift; sourceTree = "<group>"; };
 		32971D9E250B15B0009D2733 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		32FD19EA251B3C2800413500 /* LoadImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageOperation.swift; sourceTree = "<group>"; };
+		32FD19EE251B3C6400413500 /* SYImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYImageView.swift; sourceTree = "<group>"; };
 		3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_8ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_12ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_13ViewController.swift; sourceTree = "<group>"; };
@@ -780,6 +784,15 @@
 			path = YXUtils;
 			sourceTree = "<group>";
 		};
+		32FD19E9251B3B8800413500 /* Section3 */ = {
+			isa = PBXGroup;
+			children = (
+				32FD19EE251B3C6400413500 /* SYImageView.swift */,
+				32FD19EA251B3C2800413500 /* LoadImageOperation.swift */,
+			);
+			path = Section3;
+			sourceTree = "<group>";
+		};
 		3F8CFF7D22D368D10067194E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -830,6 +843,7 @@
 		3FB91A5F22B787E3006F7104 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				32FD19E9251B3B8800413500 /* Section3 */,
 				32971D562509DAD6009D2733 /* Section1 */,
 				32971D552509DAC5009D2733 /* Section2 */,
 			);
@@ -1104,6 +1118,7 @@
 				044A777323741FB600611F0C /* GitHubSignupService.swift in Sources */,
 				3FB91A6522B7886C006F7104 /* SHRxswift_1ViewController.swift in Sources */,
 				8FD821312389A12F005A8A74 /* SHRxswift_60ViewController.swift in Sources */,
+				32FD19EF251B3C6400413500 /* SYImageView.swift in Sources */,
 				8FD82139238A5DE3005A8A74 /* SHRxswift_62MyTableViewCell.swift in Sources */,
 				04801972244A850B0024FF51 /* SHRxswift_9NewViewController.swift in Sources */,
 				3FB94F2E22C36E84009EB6D7 /* UIImageCategory.swift in Sources */,
@@ -1185,6 +1200,7 @@
 				8FD8212D23899BE3005A8A74 /* RxUIApplicationDelegateProxy.swift in Sources */,
 				8FB0DA8922DF637A00625889 /* DoubanObject.swift in Sources */,
 				32971D7D2509DD17009D2733 /* YXJSActionUtil.swift in Sources */,
+				32FD19EB251B3C2800413500 /* LoadImageOperation.swift in Sources */,
 				32971D7C2509DD17009D2733 /* YXWatchActivityJSActionHandler.swift in Sources */,
 				3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */,
 				0426CF1C2448760700C87A87 /* SHBaseTableViewController.swift in Sources */,
