@@ -36,6 +36,11 @@ class LoadImageOperation: Operation {
             return
         }
         
+        // 取消节点1 资源的节省
+        if self.cancelTask() {
+            return
+        }
+        
         // 上锁
         // 1.2 判断是否已经开启了同一个网络任务
         if var array = self.__reTaskInfo[self.urlStr ?? ""] {
@@ -55,6 +60,11 @@ class LoadImageOperation: Operation {
                 
                 // 4 把图片存入缓存
                 bitmap.saveImageToSYCache(fileName: urlStr)
+                
+                // 取消节点2
+                if self.cancelTask() {
+                    return
+                }
                 
                 // 5 加载图片（主线程上加载）
                 loadImageInMain(bitmap: bitmap)
@@ -136,9 +146,6 @@ class LoadImageOperation: Operation {
     
     func loadImageInMain(bitmap: UIImage) {
         DispatchQueue.main.async {
-            if self.imageview?.urlStr != self.urlStr {
-                return
-            }
             
             self.imageview?.image = bitmap
         }
@@ -160,6 +167,15 @@ class LoadImageOperation: Operation {
             
             self.__reTaskInfo[self.urlStr!] = nil       //移除任务
         }
+    }
+    
+    func cancelTask() -> Bool {
+        if self.imageview?.urlStr != self.urlStr {
+            
+            return true
+        }
+        
+        return false
     }
     
     //解锁代码自己写（防止脏数据的出现）
