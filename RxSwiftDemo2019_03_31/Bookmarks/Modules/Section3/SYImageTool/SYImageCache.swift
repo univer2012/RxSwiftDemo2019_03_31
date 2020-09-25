@@ -51,7 +51,7 @@ class SYImageCache {
     
     // 1 查找
     func searchImage(imageKey:String?) -> UIImage? {
-        
+        // url转化为文件名
         if let imageName = imageKey {
             
             // 1.1 从NSCache查找
